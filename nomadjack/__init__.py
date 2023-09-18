@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""NomadJack Flask Blueprint"""
+"""
+NomadJack Flask Blueprint.
+"""
+
 import os
 from flask import Blueprint, current_app, g, abort
 from . import __pkginfo__, default_config
@@ -30,9 +33,9 @@ def local_relpath_url(endpoint, values):
     if endpoint != 'nomadjack.static':
         local_path = current_app.config.get('NOMADJACK_LOCAL_DIR')
         if not (local_path and os.path.isdir(local_path)):
-            abort(500, '`NOMADJACK_RESOURCE_BASEPATH` is not a valid directory path')
+            abort(500, '`NOMADJACK_LOCAL_DIR` is not a valid directory path')
         else:
-            g.nomadjack_resource_basepath = os.path.abspath(local_path).rstrip('/\\')
+            g.nomadjack_local_path = os.path.abspath(local_path).rstrip('/\\')
 
 
 @blueprint.context_processor
