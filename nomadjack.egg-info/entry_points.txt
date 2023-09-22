@@ -1,0 +1,2 @@
+[console_scripts]
+nomadjack = nomadjack.cli:main
