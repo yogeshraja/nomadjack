@@ -10,7 +10,7 @@
     <title>{% block page_title %}{{ app_title }}{% endblock %}</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('nomadjack.static', filename='img/favicon.ico') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('nomadjack.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('nomadjack.static', filename='libs/bootstrapv5/css/bootstrap.min.css') }}" />
     {% block page_styles %}{% endblock %}
 </head>
 
@@ -19,9 +19,9 @@
     <div id="page-preloader" class="page-preloader">
         <div class="loading-center">
             <div class="loading-center-absolute">
-                <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>
+                <i class="fa-solid fa-spinner fa-pulse" aria-hidden="true"></i>
                 <br />
-                <i class="fa fa-code" aria-hidden="true"></i> {{ app_title }}
+                <i class="fa-solid fa-code" aria-hidden="true"></i> {{ app_title }}
                 <small><em>v{{ app_version }}</em></small>
             </div>
         </div>
@@ -29,7 +29,7 @@
 
     <div id="wrapper">
     <!-- header -->
-    {% include 'nomadjack/_header.html' %}
+    {% include '_header.html' %}
     <!-- /header -->
 
     <div id="page-wrapper">
@@ -43,13 +43,13 @@
     </div>
 
     <!-- footer -->
-    {% include 'nomadjack/_footer.html' %}
+    {% include '_footer.html' %}
     <!-- /footer -->
     </div>
     {% endblock %}
 
-    <script type="text/javascript" src="{{ url_for('nomadjack.static', filename='vendor/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('nomadjack.static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('nomadjack.static', filename='libs/jquery-3.7.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('nomadjack.static', filename='libs/bootstrapv5/js/bootstrap.min.js') }}"></script>
     {% block page_scripts %}{% endblock %}
 </body>
 </html>

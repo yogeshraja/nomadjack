@@ -1,0 +1,4 @@
+nomadjack/static/libs/* linguist-vendored
+nomadjack/static/css/* linguist-vendored
+nomadjack/static/img/* linguist-vendored
+nomadjack/templates/* linguist-vendored

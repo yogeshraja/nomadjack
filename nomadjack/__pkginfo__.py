@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""package info"""
+"""package info."""
 
 title = 'nomadjack'
 
-version_info = (0, 0, 1)
+version_info = (0, 0, 2)
 version = '.'.join(map(str, version_info))
 
 license = 'MIT'
