@@ -1,2 +1,6 @@
 flask
+flask_parameter_validation
+flask_httpauth 
+docker
 pylint
+twine
