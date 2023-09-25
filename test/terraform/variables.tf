@@ -4,6 +4,7 @@ variable "taskname" {
 
 variable "filepath" {
   type = string
+  default = ""
 }
 
 variable "command" {
